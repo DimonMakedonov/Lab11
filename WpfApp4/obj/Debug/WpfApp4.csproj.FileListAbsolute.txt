@@ -30,3 +30,5 @@ C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfA
 C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfApp4\obj\Debug\WpfApp4.pdb
 C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfApp4\obj\Debug\NewStudent.g.cs
 C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfApp4\obj\Debug\NewStudent.baml
+C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfApp4\obj\Debug\NewGroup.g.cs
+C:\Users\Dima\Desktop\Новая папка (2)\Новая папка\Lab11\WpfApp4\obj\Debug\NewGroup.baml

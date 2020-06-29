@@ -52,8 +52,8 @@
                 <DockPanel LastChildFill="True" >
                     <DockPanel Width="160">
                         <ListBox  ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" Margin="0" Height="305" DockPanel.Dock="Top"/>
-                        <Button Content="Add" Margin="0" DockPanel.Dock="Bottom" Height="23" VerticalAlignment="Bottom"/>
-                        <Button x:Name="removeGroupButton" Content="Remove" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Width="156"/>
+                        <Button x:Name="RemoveButton" Content="Remove" DockPanel.Dock="Bottom" Click="RemoveGroupButton_Click" VerticalAlignment="Bottom"/>
+                        <Button Content="Add" Margin="0" DockPanel.Dock="Bottom" Click="AddGroupButton_Click" VerticalAlignment="Bottom"/>
                     </DockPanel>
                     <ContentControl 
                         Content="{Binding}" 

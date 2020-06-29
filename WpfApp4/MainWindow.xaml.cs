@@ -67,6 +67,23 @@ namespace WpfApp4
             studentViewSource.Filter += StudentsFilter;
         }
 
+        private void AddGroupButton_Click(object sender, RoutedEventArgs e)
+        {
+            var db = (Application.Current as App).db;
+            var groupViewSource = ((CollectionViewSource)(this.FindResource("groupViewSource")));
+            groupViewSource.Source = db.Groups.Local;
+            var dialog = new NewGroup();
+            if (dialog.ShowDialog() == true)
+            {
+                var newGroup = new Model.Group();
+                var rand = new Random();
+                newGroup = dialog.FindResource("NewGroup") as Model.Group;
+                newGroup.Id = rand.Next(1000000);
+                db.Groups.Add(newGroup);
+            }
+            
+        }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var db = (Application.Current as App).db;
@@ -84,6 +101,13 @@ namespace WpfApp4
             
             db.Students.Remove(listBox.SelectedItem as Model.Student);
             
+        }
+
+        private void RemoveGroupButton_Click(object sender, RoutedEventArgs e)
+        {
+            var db = (Application.Current as App).db;
+            db.Groups.Remove(groupSelectList.SelectedItem as Model.Group);
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
